@@ -25,57 +25,56 @@ int main(int argc, char const *argv[])
 	int position;
 	int key;
 	List *L = new List;
-	L->head = new node;
-	L->head->next = NULL;
+	L->first = NULL;
 	cout << "The system has created an int list for you." << endl;
-	while(1)
+	while (1)
 	{
 		PrintChoiceTable();
 		cout << "Please choice function:";
 		cin >> choice;
-		switch(choice)
+		switch (choice)
 		{
-			case(1):
+			case(1) :
 				cout << "Please input an int you want to insert:";
 				cin >> element;
-				AddEnd(L,element);
+				AddEnd(L, element);
 				break;
-			case(2):
+			case(2) :
 				cout << "Please input an int you want to insert:";
 				cin >> element;
-				AddFirst(L,element);
+				AddFirst(L, element);
 				break;
-			case(3):
+			case(3) :
 				cout << "Please input the int you want to find:";
 				cin >> element;
 				if (Find(L, element, position) != NULL)
 				{
-					cout << "The element is No." << position << "element in the list."<< endl;
+					cout << "The element is No." << position << "element in the list." << endl;
 				}
 				else
 				{
 					cout << "Not found the node." << endl;
 				}
 				break;
-			case(4):
+			case(4) :
 				cout << "Please input an int you want to insert:";
 				cin >> element;
 				cout << "Which element do you want to insert after:";
 				cin >> key;
 				Insert(L, key, element);
 				break;
-			case(5):
+			case(5) :
 				cout << "Please input an int you want to delete:";
 				cin >> key;
 				Delete(L, key);
 				break;
-			case(6):
+			case(6) :
 				cout << "The length of the list is " << Length(L) << endl;
 				break;
-			case(7):
+			case(7) :
 				Output(L);
 				break;
-			case(0):
+			case(0) :
 				goto STOP;
 				break;
 			default:
@@ -83,6 +82,6 @@ int main(int argc, char const *argv[])
 				break;
 		}
 	}
-	STOP:
+STOP:
 	return 0;
 }

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ChainList.h">
+    <ClInclude Include="List.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
